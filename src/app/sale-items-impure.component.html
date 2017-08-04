@@ -1,0 +1,26 @@
+<h2>{{title}}</h2>
+<p>
+New hero:
+  <input type="text" #box
+          (keyup.enter)="addItem(box.value); box.value=''"
+          placeholder="item name">
+  <input id="can-fly" type="checkbox" [(ngModel)]="onSale"> on sale
+</p>
+<p>
+  <input id="mutate" type="checkbox" [(ngModel)]="mutate">Mutate array
+  <button (click)="reset()">Reset</button>
+</p>
+
+<h4>Items on sale (piped)</h4>
+<div id="flyers">
+  <div *ngFor="let item of (items | saleItemsImpure)">
+    {{item.name}}
+  </div>
+</div>
+
+<h4>All Heroes (no pipe)</h4>
+<div id="all">
+  <div *ngFor="let item of items">
+    {{item.name}}
+  </div>
+</div>

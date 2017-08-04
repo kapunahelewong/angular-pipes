@@ -1,0 +1,73 @@
+<a id="toc"></a>
+<h1>Pipes</h1>
+<a href="#item-shipdate1">Ship Date v1</a><br>
+<a href="#item-datepipe">Ship Date DatePipe</a><br>
+<a href="#item-shipdate2">Item Ship Date v2</a><br>
+<a href="#shipdate-pipe-chaining">Ship Date Pipe Chaining</a><br>
+<a href="#exponent">Exponential custom pipe</a><br>
+<a href="#exponent-calc">Power Boost Calculator custom pipe with params</a><br>
+<a href="#onsale-filter">On sale filter pipe (pure)</a><br>
+<a href="#sale-items-impure">Sale items filter pipe (impure)</a><br>
+<a href="#item-message">Async ITem Message and AsyncPipe</a><br>
+<a href="#item-list">Item List with caching FetchJsonPipe</a><br>
+
+
+<hr>
+<a id="item-shipdate1"></a>
+<h2>Item Ship Date v1</h2>
+<item-shipdate></item-shipdate>
+
+<hr>
+<a id="item-datepipe"></a>
+<h2>Item ship date DatePipe</h2>
+<p>The item's ship date is {{ shipdate | date }}</p>
+<p>The item's ship date is {{ shipdate | date:"MM/dd/yy" }} </p>
+
+<hr>
+<a id="item-shipdate2"></a>
+<h2>Item Ship Date v2</h2>
+<item-shipdate2></item-shipdate2>
+
+<hr>
+<a id="shipdate-pipe-chaining"></a>
+<h2>Ship Date Pipe Chaining</h2>
+<p>
+  The chained item's ship date is
+  {{ shipdate | date | uppercase}}
+</p>
+
+<p>
+  The chained item's ship date is
+  {{  shipdate | date:'fullDate' | uppercase}}
+</p>
+<p>
+  The chained item's ship date is
+  {{ ( shipdate | date:'fullDate' ) | uppercase}}
+</p>
+
+<hr>
+<a id="exponent"></a>
+<exponential></exponential>
+
+<hr>
+<a id="exponent-calc"></a>
+<exponent-calculator>loading</exponent-calculator>
+
+<hr>
+<a id="onsale-filter"></a>
+<sale-items></sale-items>
+
+<hr>
+<a id="sale-items-impure"></a>
+<sale-items-impure></sale-items-impure>
+
+<hr>
+<a id="item-message"></a>
+<!-- async examples at the top so can see them in action -->
+<item-message></item-message>
+
+<hr>
+<a id="item-list"></a>
+<item-list></item-list>
+
+<div style="margin-top:12em;"></div>
